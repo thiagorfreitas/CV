@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Scroll animation for sections
     const sections = document.querySelectorAll('.section');
+    const header = document.querySelector('header');
     
     function checkSections() {
         const triggerBottom = window.innerHeight * 0.8;
@@ -67,6 +68,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 section.classList.add('visible');
             }
         });
+    }
+    
+    // Parallax effect on header
+    function handleParallax() {
+        const scrolled = window.pageYOffset;
+        if (header && scrolled < 500) {
+            header.style.transform = `translateY(${scrolled * 0.3}px)`;
+            header.style.opacity = 1 - (scrolled / 500);
+        }
     }
     
     // Check sections on load
