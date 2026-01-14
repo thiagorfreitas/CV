@@ -61,12 +61,12 @@ body {
     right: 20px;
     z-index: 1000;
     display: flex;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(247, 245, 242, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 30px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(124, 116, 88, 0.2);
 }
 
 .language-toggle button {
@@ -76,12 +76,12 @@ body {
     cursor: pointer;
     font-weight: 600;
     transition: var(--transition);
-    color: rgba(255, 255, 255, 0.9);
+    color: #5A5347;
     font-size: 0.9rem;
 }
 
 .language-toggle button.active {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: var(--primary-color);
     color: white;
 }
 
@@ -94,30 +94,30 @@ body {
     width: 50px;
     height: 50px;
     border: none;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(247, 245, 242, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: var(--transition);
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(124, 116, 88, 0.2);
 }
 
 .theme-toggle:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background: rgba(247, 245, 242, 1);
 }
 
 .theme-toggle i {
     position: absolute;
     font-size: 1.2rem;
     transition: var(--transition);
-    color: rgba(255, 255, 255, 0.95);
+    color: #5A5347;
 }
 
 .theme-toggle .fa-moon {
@@ -142,17 +142,17 @@ body.dark-mode .theme-toggle .fa-sun {
 }
 
 body.dark-mode .theme-toggle {
-    background: rgba(124, 116, 88, 0.15);
-    border-color: rgba(124, 116, 88, 0.3);
+    background: rgba(30, 30, 30, 0.95);
+    border-color: rgba(184, 165, 143, 0.3);
 }
 
 body.dark-mode .theme-toggle:hover {
-    background: rgba(124, 116, 88, 0.25);
+    background: rgba(30, 30, 30, 1);
 }
 
 body.dark-mode .language-toggle {
-    background-color: rgba(124, 116, 88, 0.15);
-    border-color: rgba(124, 116, 88, 0.3);
+    background-color: rgba(30, 30, 30, 0.95);
+    border-color: rgba(184, 165, 143, 0.3);
 }
 
 body.dark-mode .language-toggle button {
