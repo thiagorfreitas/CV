@@ -2,6 +2,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set default language
     document.body.classList.add('pt-lang');
     
+    // Dark mode toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('theme');
+    
+    // Load saved theme preference
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+    
+    themeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        
+        // Save theme preference
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    });
+    
     // Language toggle
     const ptBtn = document.getElementById('pt-btn');
     const enBtn = document.getElementById('en-btn');
